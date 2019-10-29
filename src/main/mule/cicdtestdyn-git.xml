@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="90585868-b976-47e2-b1b9-839918a206a5" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicdtestdyn-gitFlow" doc:id="89a1a307-75bf-46d2-8bf3-e1aaf48c7fcd" >
+		<http:listener doc:name="Listener" doc:id="54632e9c-af92-4037-a8b9-f6e57d7825bb" config-ref="HTTP_Listener_config" path="/testdyngit"/>
+		<logger level="INFO" doc:name="Logger" doc:id="880c35f2-2fc5-443d-bcb7-ff969461a0be" message="Testing GIT Dynamic"/>
+		<set-payload value="hellow GIT Dyn" doc:name="Set Payload" doc:id="24b439e6-181a-4307-96c4-4943a24bcddc" />
+	</flow>
+</mule>

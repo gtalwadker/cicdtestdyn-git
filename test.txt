@@ -1,2 +1,0 @@
-http://localhost:8081/artifactory/pac-dependency-artifacts/com/oracle/ojdbc6/11.1.0.6.0
-pac-dependency-artifacts/com/oracle/ojdbc6/11.1.0.6.0/
